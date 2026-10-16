@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>5 IAs Grátis que Parecem Ilegais — Lucro com IA</title>
+<meta name="description" content="NotebookLM, Perplexity, Google Flow, Gemini e CapCut: o que cada uma faz e como usar.">
+<link href="https://fonts.googleapis.com/css2?family=Anton&family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#0b0b0d;--card:#16161a;--txt:#ececf1;--mut:#a3a3ad;--verde:#c9f25b;--borda:#2a2a31}
+*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--txt);font:16px/1.6 Inter,system-ui,sans-serif}
+.w{max-width:720px;margin:0 auto;padding:28px 16px 64px}
+h1{font-family:Anton,sans-serif;font-weight:400;font-size:clamp(34px,8vw,54px);line-height:1.05;margin:8px 0 12px;text-transform:uppercase}
+h1 span,h2 span{color:var(--verde)}
+h2{font-family:Anton,sans-serif;font-weight:400;font-size:28px;text-transform:uppercase;margin:40px 0 8px}
+.tag{display:inline-block;font-size:13px;font-weight:700;letter-spacing:.08em;color:var(--verde);text-transform:uppercase}
+p{color:var(--mut)}strong{color:var(--txt)}
+.card{background:var(--card);border:1px solid var(--borda);border-radius:14px;padding:18px;margin:14px 0}
+pre{white-space:pre-wrap;word-break:break-word;background:#0f0f12;border:1px solid var(--borda);border-radius:10px;padding:14px;font:13.5px/1.55 ui-monospace,Consolas,monospace;color:#dcdce4;margin:10px 0 0}
+button.copiar{margin-top:10px;background:var(--verde);color:#111;border:0;border-radius:10px;padding:10px 14px;font-weight:700;cursor:pointer;font-size:15px}
+ol{padding-left:20px;color:var(--mut)}li{margin:6px 0}
+table{width:100%;border-collapse:collapse;font-size:14px}th,td{border-bottom:1px solid var(--borda);padding:9px 6px;text-align:left;vertical-align:top}
+th{color:var(--verde);font-weight:700}td{color:var(--mut)}td:first-child{color:var(--txt);font-weight:600}
+.tabela{overflow-x:auto}
+.cta{display:block;text-align:center;background:var(--verde);color:#111;text-decoration:none;font-weight:800;border-radius:12px;padding:16px;font-size:17px;margin-top:14px}
+.rod{margin-top:40px;font-size:13px;color:#6f6f78;text-align:center}
+</style>
+</head>
+<body><main class="w">
+<span class="tag">Lucro com IA · lista grátis</span>
+<h1>5 IAs grátis <span>que parecem ilegais</span></h1>
+<p>Todas têm uso gratuito (algumas com limite por dia). Teste uma por dia e veja qual muda a sua rotina.</p>
+
+<h2>01 · <span>NotebookLM</span></h2>
+<div class="card"><p>Você sobe um PDF, um site ou um vídeo e ele cria um <strong>podcast com 2 vozes</strong> explicando o conteúdo. Perfeito para estudar ouvindo. <a href="https://notebooklm.google.com" style="color:var(--verde)">notebooklm.google.com</a></p></div>
+
+<h2>02 · <span>Perplexity</span></h2>
+<div class="card"><p>Pesquisa como o Google, mas responde em texto e <strong>mostra as fontes</strong> de cada informação. <a href="https://www.perplexity.ai" style="color:var(--verde)">perplexity.ai</a></p>
+<pre id="p1">Quais são os 5 tipos de negócio de delivery que mais crescem na minha cidade, [CIDADE]? Cite as fontes.</pre>
+<button class="copiar" data-alvo="p1">Copiar prompt</button></div>
+
+<h2>03 · <span>Google Flow</span></h2>
+<div class="card"><p>Vídeos e anúncios de cinema a partir de um texto ou de uma imagem, com <strong>créditos grátis todo dia</strong>. <a href="https://labs.google/flow" style="color:var(--verde)">labs.google/flow</a>. O nosso método: <a href="https://adiell-ds.github.io/pins/lucrocomia/prompt-anuncio-3d/" style="color:var(--verde)">prompt dos anúncios 3D</a>.</p></div>
+
+<h2>04 · <span>Gemini</span></h2>
+<div class="card"><p>Cole o link de um vídeo longo do YouTube e peça um resumo. <a href="https://gemini.google.com" style="color:var(--verde)">gemini.google.com</a></p>
+<pre id="p2">Resuma este vídeo em 7 pontos práticos e diga qual eu consigo aplicar hoje: [LINK DO VÍDEO]</pre>
+<button class="copiar" data-alvo="p2">Copiar prompt</button></div>
+
+<h2>05 · <span>CapCut</span></h2>
+<div class="card"><p>Edita o vídeo no celular e cria <strong>legendas automáticas</strong>, palavra por palavra, em segundos. <a href="https://www.capcut.com" style="color:var(--verde)">capcut.com</a></p></div>
+
+<h2>E como <span>ganhar dinheiro</span> com isso?</h2>
+<div class="card">
+<p>Com essas ferramentas já dá para oferecer fotos, vídeos e textos para negócios da sua cidade. O difícil é conseguir o <strong>primeiro cliente</strong>. Montamos um plano de 7 dias exatamente para isso.</p>
+<a class="cta" href="https://pay.hotmart.com/S107237186K?off=5am8yhhs&checkoutMode=10">Quero o plano: Seu Primeiro Cliente com IA</a>
+</div>
+
+<p class="rod">@lucrocomia · Lucro com IA</p>
+</main>
+<script>
+document.querySelectorAll('button.copiar').forEach(b=>b.addEventListener('click',async()=>{
+  const t=document.getElementById(b.dataset.alvo).innerText;
+  try{await navigator.clipboard.writeText(t);b.textContent='Copiado ✓'}catch(e){b.textContent='Selecione e copie'}
+  setTimeout(()=>b.textContent='Copiar prompt',2000)}));
+</script>
+</body></html>
