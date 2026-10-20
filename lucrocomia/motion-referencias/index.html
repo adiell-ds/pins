@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Motion graphics com o Claude: referências — Lucro com IA</title>
+<meta name="description" content="Biblioteca grátis de prompts, as referências do nosso motor e um prompt para começar.">
+<link href="https://fonts.googleapis.com/css2?family=Anton&family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#0b0b0d;--card:#16161a;--txt:#ececf1;--mut:#a3a3ad;--verde:#c9f25b;--borda:#2a2a31}
+*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--txt);font:16px/1.6 Inter,system-ui,sans-serif}
+.w{max-width:720px;margin:0 auto;padding:28px 16px 64px}
+h1{font-family:Anton,sans-serif;font-weight:400;font-size:clamp(34px,8vw,54px);line-height:1.05;margin:8px 0 12px;text-transform:uppercase}
+h1 span,h2 span{color:var(--verde)}
+h2{font-family:Anton,sans-serif;font-weight:400;font-size:28px;text-transform:uppercase;margin:40px 0 8px}
+.tag{display:inline-block;font-size:13px;font-weight:700;letter-spacing:.08em;color:var(--verde);text-transform:uppercase}
+p{color:var(--mut)}strong{color:var(--txt)}
+.card{background:var(--card);border:1px solid var(--borda);border-radius:14px;padding:18px;margin:14px 0}
+pre{white-space:pre-wrap;word-break:break-word;background:#0f0f12;border:1px solid var(--borda);border-radius:10px;padding:14px;font:13.5px/1.55 ui-monospace,Consolas,monospace;color:#dcdce4;margin:10px 0 0}
+button.copiar{margin-top:10px;background:var(--verde);color:#111;border:0;border-radius:10px;padding:10px 14px;font-weight:700;cursor:pointer;font-size:15px}
+ol{padding-left:20px;color:var(--mut)}li{margin:6px 0}
+table{width:100%;border-collapse:collapse;font-size:14px}th,td{border-bottom:1px solid var(--borda);padding:9px 6px;text-align:left;vertical-align:top}
+th{color:var(--verde);font-weight:700}td{color:var(--mut)}td:first-child{color:var(--txt);font-weight:600}
+.tabela{overflow-x:auto}
+.cta{display:block;text-align:center;background:var(--verde);color:#111;text-decoration:none;font-weight:800;border-radius:12px;padding:16px;font-size:17px;margin-top:14px}
+.rod{margin-top:40px;font-size:13px;color:#6f6f78;text-align:center}
+</style>
+</head>
+<body><main class="w">
+<span class="tag">Lucro com IA · referências de motion</span>
+<h1>Motion graphics <span>com o Claude</span></h1>
+<p>Onde achar ideias, o que a gente usa e um prompt para começar.</p>
+<h2>01 · <span>Biblioteca de prompts</span></h2><div class="card"><p>O <a href="https://prompt-motion.com" style="color:var(--verde)">Prompt Motion</a> reúne mais de 200 vídeos de motion graphics feitos com o Claude, cada um com o prompt usado. É grátis e não pede cadastro. Tem filtros (interface de app, texto animado, gráficos, formas, partículas) e um botão <strong>Customize</strong> que adapta o prompt à sua marca. Os vídeos e prompts são dos criadores, que ficam creditados em cada página: use como inspiração.</p></div>
+<h2>02 · <span>As referências do nosso motor</span></h2><div class="card"><table><tr><th>Item</th><th>O que usamos</th></tr><tr><td>Formato</td><td>1080×1920, 30 quadros por segundo, sem som (a música entra no Instagram)</td></tr><tr><td>Cores</td><td>fundo escuro #0b1118 e verde-lima #c9f25b de destaque</td></tr><tr><td>Tipografia</td><td>Anton (títulos em maiúsculas) e uma sans simples para o apoio</td></tr><tr><td>Ritmo</td><td>abertura de ~3 s, cenas de 3 a 4 s, final de ~3 s com o pedido de ação</td></tr><tr><td>Cenas</td><td>gancho, item com cartão, frase de impacto e final</td></tr></table></div>
+<h2>03 · <span>Prompt para começar</span></h2><div class="card"><p>Cole no Claude e troque o que está entre [COLCHETES]:</p><pre id="p1">Crie um vídeo de motion graphics vertical (1080x1920, 30 fps, 15 segundos) em HTML, CSS e JavaScript, com uma função render(t) que desenha cada quadro pelo tempo t, para eu gravar quadro a quadro. Tema: [TEMA]. Estilo: fundo escuro #0b1118, destaque verde-lima #c9f25b, títulos em Anton em maiúsculas. Estrutura: abertura de 3 s com a frase [GANCHO], 3 cenas de 3 s com um cartão cada ([ITEM 1], [ITEM 2], [ITEM 3]) e um final de 3 s com o pedido: comente [PALAVRA]. Textos em português do Brasil. Sem logos de terceiros.</pre>
+<button class="copiar" data-alvo="p1">Copiar prompt</button></div>
+<h2>04 · <span>Do código ao vídeo</span></h2><div class="card"><p>O Claude escreve a animação. Para virar arquivo de vídeo, a gente renderiza quadro a quadro com <strong>Playwright</strong> e junta com o <strong>FFmpeg</strong>, ambos grátis. Se preferir algo mais simples, grave a tela com a página aberta.</p></div>
+<h2>E como <span>ganhar dinheiro</span> com isso?</h2>
+<div class="card">
+<p>Com essas ferramentas já dá para oferecer fotos, vídeos e textos para negócios da sua cidade. O difícil é conseguir o <strong>primeiro cliente</strong>. Montamos um plano de 7 dias exatamente para isso.</p>
+<a class="cta" href="https://pay.hotmart.com/S107237186K?off=5am8yhhs&checkoutMode=10">Quero o plano: Seu Primeiro Cliente com IA</a>
+</div>
+
+<p class="rod">@lucrocomia · Lucro com IA</p>
+</main>
+<script>
+document.querySelectorAll('button.copiar').forEach(b=>b.addEventListener('click',async()=>{
+  const t=document.getElementById(b.dataset.alvo).innerText;
+  try{await navigator.clipboard.writeText(t);b.textContent='Copiado ✓'}catch(e){b.textContent='Selecione e copie'}
+  setTimeout(()=>b.textContent='Copiar prompt',2000)}));
+</script>
+</body></html>
