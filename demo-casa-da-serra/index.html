@@ -10,15 +10,16 @@
 <link rel="preload" as="image" href="assets/hero-poster.jpg">
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
 <style>
-:root{--bg:#15110e;--txt:#f3ede4;--mut:#b9aea0;--ac:#e0a94a;--card:#201b16;--e1:cubic-bezier(.22,1,.36,1);--e2:cubic-bezier(.65,0,.35,1)}
+:root{--r:18px;--rb:999px;--hw:500;--bg:#15110e;--txt:#f3ede4;--mut:#b9aea0;--ac:#e0a94a;--card:#201b16;--e1:cubic-bezier(.22,1,.36,1);--e2:cubic-bezier(.65,0,.35,1)}
 *{box-sizing:border-box;margin:0}html{scroll-behavior:smooth}
-body{background:var(--bg);color:var(--txt);font:17px/1.65 Inter,system-ui,sans-serif;-webkit-font-smoothing:antialiased;overflow-x:hidden}
-h1,h2,h3{font-family:'Cormorant Garamond',serif;font-weight:500;line-height:1.1;letter-spacing:-.01em}
+body{background:var(--bg);color:var(--txt);font:17px/1.65 'Inter',system-ui,sans-serif;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+h1,h2,h3{font-family:'Cormorant Garamond',serif;font-weight:var(--hw);line-height:1.1;letter-spacing:-.01em}
 a{color:inherit}
 header.top{position:fixed;inset:0 0 auto 0;z-index:30;display:flex;justify-content:space-between;align-items:center;padding:18px clamp(18px,4vw,48px);background:linear-gradient(#0008,transparent);color:#fff}
 header.top b{font:500 22px 'Cormorant Garamond',serif;letter-spacing:.02em}
 header.top a.btn{font-size:14px;padding:9px 18px}
-.btn{display:inline-block;background:var(--ac);color:#1a1410;text-decoration:none;font-weight:600;border-radius:999px;padding:15px 30px;transition:transform .4s var(--e1),box-shadow .4s var(--e1)}
+header.top{transition:background .4s,color .4s,box-shadow .4s}header.top.solido{background:var(--bg);color:var(--txt);box-shadow:0 1px 0 #8882}
+.btn{display:inline-block;background:var(--ac);color:#1a1410;text-decoration:none;font-weight:600;border-radius:var(--rb);padding:15px 30px;transition:transform .4s var(--e1),box-shadow .4s var(--e1)}
 .btn:hover{transform:translateY(-2px);box-shadow:0 10px 30px #0004}
 /* HERO: vídeo preso ao scroll */
 #hero{position:relative;height:420vh}
@@ -36,12 +37,12 @@ header.top a.btn{font-size:14px;padding:9px 18px}
 main section{padding:clamp(70px,11vw,150px) clamp(20px,6vw,90px);max-width:1180px;margin:auto}
 .dois{display:grid;grid-template-columns:1fr 1fr;gap:clamp(28px,5vw,80px);align-items:center}
 .dois.inv .img{order:2}
-.img img{width:100%;border-radius:20px;display:block;aspect-ratio:4/3;object-fit:cover}
+.img img{width:100%;border-radius:var(--r);display:block;aspect-ratio:4/3;object-fit:cover}
 h2.s{font-size:clamp(32px,5vw,58px);margin-bottom:18px}
 .mut{color:var(--mut)}
 .eyebrow{display:block;color:var(--ac);font-size:13px;font-weight:600;letter-spacing:.16em;text-transform:uppercase;margin-bottom:14px}
 .grid3{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:18px;margin-top:34px}
-.card{background:var(--card);border-radius:18px;padding:26px}
+.card{background:var(--card);border-radius:var(--r);padding:26px;}
 .card h3{font-size:24px;margin-bottom:8px}
 details{border-bottom:1px solid #8883;padding:18px 0}summary{cursor:pointer;font-weight:600;font-size:18px}
 details p{margin-top:10px;color:var(--mut)}
@@ -87,6 +88,8 @@ footer{padding:36px 20px 60px;text-align:center;color:var(--mut);font-size:14px}
 (()=>{
 const $=s=>document.querySelector(s),vid=$('#vid'),hero=$('#hero'),bands=[...document.querySelectorAll('.band')],ring=$('#ring'),hint=$('#hint'),load=$('#load');
 const clamp=(x,a=0,b=1)=>Math.min(b,Math.max(a,x));
+const topo=$('header.top'),fimHero=()=>hero.offsetHeight-innerHeight;
+const sol=()=>topo.classList.toggle('solido',scrollY>fimHero()-40);addEventListener('scroll',sol,{passive:true});sol();
 /* revelar secções */
 const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}}),{threshold:.15});
 document.querySelectorAll('.rv').forEach(el=>io.observe(el));
