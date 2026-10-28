@@ -32,7 +32,12 @@ header.top{transition:background .4s,color .4s,box-shadow .4s}header.top.solido{
 .band h2{font-size:clamp(38px,7.2vw,96px);max-width:14ch}
 .band p{margin-top:18px;font-size:clamp(16px,1.9vw,22px);max-width:34ch;opacity:.92}
 #ring{position:absolute;left:0;bottom:0;height:3px;width:0;background:var(--ac);z-index:5}
-#hint{position:absolute;left:50%;bottom:26px;transform:translateX(-50%);color:#fff;font-size:12px;letter-spacing:.18em;text-transform:uppercase;opacity:.85;transition:opacity .4s}
+/* aviso de rolar: destacado e repetido sempre que a pessoa para dentro do hero (pedido do Adiell, 29/10) */
+#hint{position:absolute;left:50%;bottom:34px;transform:translateX(-50%);z-index:6;display:flex;flex-direction:column;align-items:center;gap:6px;background:var(--ac);color:#ffffff;font-size:13px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;white-space:nowrap;padding:12px 22px 10px;border-radius:999px;box-shadow:0 6px 30px #0008,0 0 0 0 var(--ac);opacity:1;transition:opacity .35s;pointer-events:none;animation:hintPulse 1.8s ease-in-out infinite}
+#hint .seta{width:14px;height:14px;border-right:3px solid currentColor;border-bottom:3px solid currentColor;transform:rotate(45deg);animation:hintSeta 1.1s ease-in-out infinite}
+@keyframes hintPulse{0%,100%{transform:translateX(-50%) scale(1)}50%{transform:translateX(-50%) scale(1.06)}}
+@keyframes hintSeta{0%,100%{transform:translateY(-3px) rotate(45deg)}50%{transform:translateY(4px) rotate(45deg)}}
+@media(prefers-reduced-motion:reduce){#hint,#hint .seta{animation:none}}
 #load{position:absolute;right:20px;top:70px;color:#fff;font-size:12px;opacity:.8;z-index:6}
 /* página abaixo */
 main section{padding:clamp(70px,11vw,150px) clamp(20px,6vw,90px);max-width:1180px;margin:auto}
@@ -71,7 +76,7 @@ footer{padding:36px 20px 60px;text-align:center;color:var(--mut);font-size:14px}
   <div class="band" data-de="0.36" data-ate="0.64"><h2>Bolos e salgados todos os dias</h2><p>A montra cheia, do pequeno-almoço ao lanche.</p></div>
   <div class="band" data-de="0.72" data-ate="1.0"><h2>Pão quente, feito cá</h2><p>Na Rua de Caires, em Braga.</p></div>
 
-  <div id="hint">Role para entrar</div><div id="load"></div><div id="ring"></div>
+  <div id="hint"><span id="hintTxt">Role para entrar</span><span class="seta"></span></div><div id="load"></div><div id="ring"></div>
 </div></div>
 
 <main>
@@ -86,7 +91,7 @@ footer{padding:36px 20px 60px;text-align:center;color:var(--mut);font-size:14px}
 
 <script>
 (()=>{
-const $=s=>document.querySelector(s),vid=$('#vid'),hero=$('#hero'),bands=[...document.querySelectorAll('.band')],ring=$('#ring'),hint=$('#hint'),load=$('#load');
+const $=s=>document.querySelector(s),vid=$('#vid'),hero=$('#hero'),bands=[...document.querySelectorAll('.band')],ring=$('#ring'),hint=$('#hint'),load=$('#load'),hintTxt=$('#hintTxt');let ultY=scrollY,ultMov=0,mudou=false;
 const clamp=(x,a=0,b=1)=>Math.min(b,Math.max(a,x));
 const topo=$('header.top'),fimHero=()=>hero.offsetHeight-innerHeight;
 const sol=()=>topo.classList.toggle('solido',scrollY>fimHero()-40);addEventListener('scroll',sol,{passive:true});sol();
@@ -118,7 +123,7 @@ function tick(){
   mostra+=(alvo-mostra)*.14;if(Math.abs(alvo-mostra)<.002)mostra=alvo;
   if(pronto&&!seeking&&Math.abs(vid.currentTime-mostra)>1/60){seeking=true;vid.currentTime=mostra}
   const p=prog();
-  ring.style.width=(p*100)+'%';hint.style.opacity=p>.02?0:.85;
+  ring.style.width=(p*100)+'%';if(Math.abs(scrollY-ultY)>2){ultY=scrollY;ultMov=performance.now();if(p>.02&&!mudou){mudou=true;hintTxt.textContent='Continue a rolar'}}hint.style.opacity=(p<.97&&(p<.02||performance.now()-ultMov>1100))?1:0;
   bands.forEach(b=>{const a=+b.dataset.de,z=+b.dataset.ate,r=.04;
     const o=clamp((p-a)/r)*clamp((z-p)/r);b.style.opacity=o;b.style.transform=`translateY(${(1-o)*14}px)`});
   requestAnimationFrame(tick);
