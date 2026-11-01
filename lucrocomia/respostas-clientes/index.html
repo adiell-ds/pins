@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>8 Modelos de Resposta a Clientes — Lucro com IA</title>
+<meta name="description" content="Respostas prontas para reclamações, avaliações ruins e pedidos de desconto, com o comando para gerar a sua no ChatGPT.">
+<link href="https://fonts.googleapis.com/css2?family=Anton&family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#0b0b0d;--card:#16161a;--txt:#ececf1;--mut:#a3a3ad;--verde:#c9f25b;--borda:#2a2a31}
+*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--txt);font:16px/1.6 Inter,system-ui,sans-serif}
+.w{max-width:720px;margin:0 auto;padding:28px 16px 64px}
+h1{font-family:Anton,sans-serif;font-weight:400;font-size:clamp(34px,8vw,54px);line-height:1.05;margin:8px 0 12px;text-transform:uppercase}
+h1 span,h2 span{color:var(--verde)}
+h2{font-family:Anton,sans-serif;font-weight:400;font-size:28px;text-transform:uppercase;margin:40px 0 8px}
+.tag{display:inline-block;font-size:13px;font-weight:700;letter-spacing:.08em;color:var(--verde);text-transform:uppercase}
+p{color:var(--mut)}strong{color:var(--txt)}
+.card{background:var(--card);border:1px solid var(--borda);border-radius:14px;padding:18px;margin:14px 0}
+pre{white-space:pre-wrap;word-break:break-word;background:#0f0f12;border:1px solid var(--borda);border-radius:10px;padding:14px;font:13.5px/1.55 ui-monospace,Consolas,monospace;color:#dcdce4;margin:10px 0 0}
+button.copiar{margin-top:10px;background:var(--verde);color:#111;border:0;border-radius:10px;padding:10px 14px;font-weight:700;cursor:pointer;font-size:15px}
+ol{padding-left:20px;color:var(--mut)}li{margin:6px 0}
+table{width:100%;border-collapse:collapse;font-size:14px}th,td{border-bottom:1px solid var(--borda);padding:9px 6px;text-align:left;vertical-align:top}
+th{color:var(--verde);font-weight:700}td{color:var(--mut)}td:first-child{color:var(--txt);font-weight:600}
+.tabela{overflow-x:auto}
+.cta{display:block;text-align:center;background:var(--verde);color:#111;text-decoration:none;font-weight:800;border-radius:12px;padding:16px;font-size:17px;margin-top:14px}
+.rod{margin-top:40px;font-size:13px;color:#6f6f78;text-align:center}
+</style>
+</head>
+<body><main class="w">
+<span class="tag">Lucro com IA · guia grátis</span>
+<h1>Respostas <span>prontas</span> para cliente chateado</h1>
+<p>Reclamação, avaliação ruim, pedido de desconto: copie, troque os dados e envie. Tudo grátis.</p>
+<h2>8 respostas <span>prontas</span></h2><p>Troque o que está entre [colchetes] e confira se tudo é verdade para o seu negócio.</p>
+<div class="card"><strong>1. Entrega atrasada</strong><p>Cliente: “Já passou 3 dias do prazo e ninguém me avisou.”</p><pre id="r1">Olá, [nome]! Você tem toda razão: deveríamos ter avisado antes, e pedimos desculpa. Seu pedido sai hoje e enviamos o código de rastreio até as [hora]. Obrigado pela paciência.</pre><button class="copiar" data-alvo="r1">Copiar prompt</button></div>
+<div class="card"><strong>2. Produto danificado</strong><p>Cliente: “Chegou com a caixa amassada e um item quebrado.”</p><pre id="r2">Sentimos muito, [nome]! Envie uma foto do item e da caixa por aqui que a gente faz a troca sem custo e despacha o novo [quando].</pre><button class="copiar" data-alvo="r2">Copiar prompt</button></div>
+<div class="card"><strong>3. Demora no atendimento</strong><p>Cliente: “Esperei 40 minutos pra ser atendido.”</p><pre id="r3">Obrigado por contar, [nome]. Esse tempo de espera é longo demais e vamos revisar a escala nos horários de pico. Será um prazer receber você de novo.</pre><button class="copiar" data-alvo="r3">Copiar prompt</button></div>
+<div class="card"><strong>4. Cobrança errada</strong><p>Cliente: “Fui cobrado a mais.”</p><pre id="r4">Olá, [nome]! Vamos conferir agora. Me passe o número do pedido e, se a cobrança estiver errada, faremos o estorno e confirmamos por aqui.</pre><button class="copiar" data-alvo="r4">Copiar prompt</button></div>
+<div class="card"><strong>5. Avaliação ruim no Google</strong><p>Cliente: “Atendimento péssimo, não recomendo.”</p><pre id="r5">Olá, [nome]. Lamentamos que a sua experiência não tenha sido boa. Queremos entender o que aconteceu e resolver: pode nos chamar em [contato]? Sua opinião ajuda a melhorarmos.</pre><button class="copiar" data-alvo="r5">Copiar prompt</button></div>
+<div class="card"><strong>6. Pedido de desconto</strong><p>Cliente: “Dá pra fazer mais barato?”</p><pre id="r6">Obrigado pelo interesse, [nome]! Nesse serviço o valor já é o melhor que conseguimos. Posso incluir [bônus] para você fechar hoje, se fizer sentido.</pre><button class="copiar" data-alvo="r6">Copiar prompt</button></div>
+<div class="card"><strong>7. Cliente sumiu</strong><p>Cliente: “(parou de responder o orçamento)”</p><pre id="r7">Oi, [nome]! Passando para saber se ficou alguma dúvida sobre o orçamento. Se preferir, ajusto a proposta ao seu prazo. É só me dizer.</pre><button class="copiar" data-alvo="r7">Copiar prompt</button></div>
+<div class="card"><strong>8. Elogio</strong><p>Cliente: “Adorei o atendimento, voltarei!”</p><pre id="r8">Que alegria ler isso, [nome]! Obrigado por escolher a gente. Quando voltar, avise que preparamos algo especial.</pre><button class="copiar" data-alvo="r8">Copiar prompt</button></div>
+<h2>O comando para <span>gerar a sua</span></h2><div class="card"><strong>Cole no ChatGPT</strong><pre id="p9">Aja como atendente de [tipo do seu negócio]. Responda esta mensagem de cliente com educação: reconheça o problema, diga o próximo passo e termine com um prazo. Mensagem: [cole aqui].</pre><button class="copiar" data-alvo="p9">Copiar prompt</button></div>
+<h2>Regras de <span>ouro</span></h2><ol><li>Responda logo: quem espera muito tende a desistir.</li><li>Reconheça o problema antes de explicar.</li><li>Nunca discuta em público. Leve a conversa para o privado.</li><li>Só prometa prazo que dá para cumprir.</li></ol>
+
+<h2>E se você <span>atende clientes</span>?</h2>
+<div class="card"><p>Muitos negócios locais não respondem as avaliações por falta de tempo. Isso é um serviço que dá para oferecer. O plano de 7 dias mostra como achar o primeiro cliente e quanto cobrar.</p><a class="cta" href="https://pay.hotmart.com/S107237186K?off=5am8yhhs&checkoutMode=10">Quero o plano: Seu Primeiro Cliente com IA</a></div>
+<p class="rod">@lucrocomia · Lucro com IA</p>
+</main>
+<script>
+document.querySelectorAll('button.copiar').forEach(b=>b.addEventListener('click',async()=>{
+  const t=document.getElementById(b.dataset.alvo).innerText;
+  try{await navigator.clipboard.writeText(t);b.textContent='Copiado ✓'}catch(e){b.textContent='Selecione e copie'}
+  setTimeout(()=>b.textContent='Copiar prompt',2000)}));
+</script>
+</body></html>
