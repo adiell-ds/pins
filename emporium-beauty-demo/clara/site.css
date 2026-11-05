@@ -149,3 +149,12 @@ footer .container { align-items: center; }
 @media (max-width: 48rem) { .hero-art { max-width: 420px; } }
 .hero-art .arch { overflow: hidden; background: var(--color-paper-3); color: var(--color-ink); }
 .arch-video { width: 100%; height: 100%; object-fit: cover; display: block; }
+.hero-video { position: relative; overflow: hidden; display: grid; align-items: center; min-height: min(calc(100svh - 72px), 860px); padding-block: var(--space-2xl); color: var(--color-on-green); background: var(--color-green); }
+.hero-video .bg { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; z-index: 0; }
+.hero-video::after { content: ""; position: absolute; inset: 0; z-index: 1; background: linear-gradient(90deg, color-mix(in oklab, var(--color-bar) 82%, transparent) 0%, color-mix(in oklab, var(--color-bar) 62%, transparent) 45%, color-mix(in oklab, var(--color-bar) 18%, transparent) 100%); }
+.hero-video .container { position: relative; z-index: 2; }
+.hero-video h1 { color: var(--color-on-green); }
+.hero-video .lead { color: var(--color-on-green-2); }
+.hero-video .btn-plain { color: var(--color-on-green); border-bottom-color: var(--color-bar-accent); }
+.hero-video :focus-visible { outline-color: var(--color-focus-on-green); }
+@media (max-width: 48rem) { .hero-video::after { background: color-mix(in oklab, var(--color-bar) 72%, transparent); } }
