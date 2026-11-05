@@ -1,0 +1,65 @@
+/* Hallmark · shape: Life Stages · genre: editorial · theme: custom · job: book · idea: "A village vet's clinic page organised by the stages of an animal's life, with the doctor's name on every door." · vibe: "warm chalk, saffron and navy, friendly village clinic"
+ * paper: oklch(97.5% 0.012 95) · accent: oklch(83% 0.15 90) · display: Gambetta · body: Figtree · hero: headline left, a consultation photograph right, saffron field behind it · nav: wordmark and one action · footer: navy contact block · imagery: AI stand-ins in slots · signature: the three life stages as one ruled list with the care for each
+ * axes: light/roman-serif/chromatic-yellow · posture: restrained · contrast: pass · fold: pass · v2.0.0 */
+/* Hallmark · pre-emit critique: P4 H4 E3 S4 R4 V4 · weakest: E, pictures are AI stand-ins in slots that real photos replace */
+@import url("./tokens.css");
+@import url("./base.css");
+
+h1, h2, h3 { font-weight: 500; line-height: 1.08; letter-spacing: var(--tracking-display); }
+h1 { font-size: var(--text-display); max-width: 15ch; }
+h2 { font-size: var(--text-section); max-width: 22ch; }
+h3 { font-size: var(--text-title); }
+.top { position: sticky; top: 0; z-index: var(--z-sticky-nav); background: var(--color-paper); border-bottom: 1px solid var(--color-rule); }
+.nav { display: flex; justify-content: space-between; align-items: center; gap: var(--space-lg); padding-block: var(--space-md); }
+.wordmark { font-family: var(--font-display); font-size: var(--text-xl); font-weight: 600; text-decoration: none; color: var(--color-ink); }
+.menu { display: flex; gap: var(--space-lg); }
+.menu a { text-decoration: none; color: var(--color-ink-2); padding-block: var(--space-sm); }
+.menu a:hover { color: var(--color-accent-text); }
+.btn { display: inline-block; padding: var(--space-sm) var(--space-lg); border-radius: var(--radius-pill); background: var(--color-accent); color: var(--color-accent-ink); font-weight: 600; text-decoration: none; white-space: nowrap; transition: opacity var(--dur-micro) var(--ease-out); }
+.btn:hover { opacity: .88; }
+.btn:active { transform: translateY(1px); }
+.btn:disabled { opacity: .45; cursor: not-allowed; }
+.btn-plain { background: none; border-radius: 0; padding-inline: 0; border-bottom: 2px solid var(--color-ink); color: var(--color-ink); }
+.actions { display: flex; gap: var(--space-lg); align-items: center; flex-wrap: wrap; margin-top: var(--space-xl); }
+section { padding-block: var(--section-gap-s); }
+.hero { min-height: min(calc(100svh - 72px), 820px); display: grid; align-items: center; padding-block: var(--space-xl); }
+.hero .container { display: grid; grid-template-columns: minmax(0, 6fr) minmax(0, 6fr); gap: var(--gap-columns); align-items: center; }
+.hero .lead { margin-top: var(--space-md); color: var(--color-ink-2); }
+.hero .pic { position: relative; }
+.hero .pic::before { content: ""; position: absolute; inset: var(--space-lg) calc(-1 * var(--space-lg)) calc(-1 * var(--space-lg)) var(--space-lg); border: 3px solid var(--color-accent); z-index: 0; }
+.hero [data-slot] { position: relative; z-index: 1; aspect-ratio: 1 / 1; }
+.services .container { display: grid; grid-template-columns: minmax(0, 5fr) minmax(0, 7fr); gap: var(--gap-columns); align-items: start; }
+.services p.lead { margin-top: var(--space-md); color: var(--color-ink-2); }
+.list { list-style: none; margin: 0; padding: 0; }
+.list li { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1.6fr); gap: var(--gap-columns); padding-block: var(--space-md); border-top: 1px solid var(--color-rule); }
+.list li:last-child { border-bottom: 1px solid var(--color-rule); }
+.list h3 { font-size: var(--text-lg); }
+.list p { color: var(--color-ink-2); }
+.stages { background: var(--color-paper-2); }
+.stages-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: var(--gap-columns); margin-top: var(--space-xl); }
+.stages-grid > div { border-top: 3px solid var(--color-accent); padding-top: var(--space-md); }
+.stages-grid h3 { margin-bottom: var(--space-sm); }
+.stages-grid p { color: var(--color-ink-2); }
+.doctor .container { display: grid; grid-template-columns: minmax(0, 6fr) minmax(0, 6fr); gap: var(--gap-columns); align-items: center; }
+.doctor [data-slot] { aspect-ratio: 4 / 3; }
+.doctor p { margin-top: var(--space-md); color: var(--color-ink-2); font-size: var(--text-lead); }
+.contact { background: var(--color-navy); color: var(--color-navy-ink); }
+.contact h2 { color: var(--color-navy-ink); }
+.contact .container { display: grid; grid-template-columns: minmax(0, 5fr) minmax(0, 7fr); gap: var(--gap-columns); align-items: start; }
+.contact ul { list-style: none; margin: var(--space-xl) 0 0; padding: 0; }
+.contact li { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 2fr); gap: var(--gap-columns); padding-block: var(--space-md); border-top: 1px solid var(--color-navy-ink-2); color: var(--color-navy-ink); }
+.contact li span { color: var(--color-navy-ink-2); }
+.contact :focus-visible, footer :focus-visible { outline-color: var(--color-navy-focus); }
+.map { width: 100%; aspect-ratio: 4 / 3; border: 0; filter: grayscale(.5); }
+footer { padding-block: var(--space-xl); font-size: var(--text-sm); color: var(--color-navy-ink-2); background: var(--color-navy); border-top: 1px solid var(--color-navy-ink-2); }
+footer .container { display: flex; justify-content: space-between; gap: var(--gap-columns); flex-wrap: wrap; }
+@media (max-width: 48rem) {
+  .menu { display: none; }
+  .hero .container, .services .container, .doctor .container, .contact .container, .stages-grid, .list li { grid-template-columns: minmax(0, 1fr); }
+  .hero .pic::before { inset: var(--space-md) calc(-1 * var(--space-sm)) calc(-1 * var(--space-md)) var(--space-sm); }
+}
+.wordmark { white-space: nowrap; }
+.map:focus-visible { outline: 2px solid var(--color-navy-focus); outline-offset: 2px; }
+@media (max-width: 48rem) { .wordmark { font-size: var(--text-lg); } .nav .btn { padding-inline: var(--space-md); } .nav { gap: var(--space-sm); } }
+.maplink { display: grid; place-items: center; min-height: 320px; padding: var(--space-xl); text-align: center; font-family: var(--font-display); font-size: var(--text-2xl); color: var(--color-navy-ink); text-decoration: none; border: 2px solid var(--color-accent); transition: background var(--dur-short) var(--ease-out); }
+.maplink:hover { background: color-mix(in oklab, var(--color-accent) 18%, transparent); }
