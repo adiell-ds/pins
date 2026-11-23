@@ -41,3 +41,7 @@ footer{background:var(--burgundy);color:var(--primary-fg);margin-top:5rem;paddin
 @media(max-width:520px){.cards{grid-template-columns:1fr}.card{min-height:11rem;padding-top:3.5rem;border-radius:999px 999px .5rem .5rem}.gal{grid-template-columns:1fr}}
 
 .thumb{border-radius:.9rem;overflow:hidden;aspect-ratio:4/3;margin-bottom:1.2rem;background:var(--secondary)}.thumb img{width:100%;height:100%;object-fit:cover}
+
+.card{background:linear-gradient(180deg,rgba(40,15,22,.15),rgba(40,15,22,.72)),var(--bg) center/cover}.card h3,.card i{color:#fff}
+.block{background:linear-gradient(90deg,rgba(255,250,244,.94) 28%,rgba(255,250,244,.55) 100%),var(--bg) center/cover}
+.brand .mm{width:auto;height:40px}
