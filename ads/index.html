@@ -62,6 +62,30 @@ footer{padding:36px 20px 60px;text-align:center;color:var(--mut);font-size:14px}
 .estatico .band{display:none}.estatico .band.b0{display:flex;opacity:1!important}
 .estatico #hint,.estatico #ring,.estatico #load{display:none}
 @media(prefers-reduced-motion:reduce){.rv{opacity:1;transform:none;transition:none}html{scroll-behavior:auto}}
+
+.ss-wrap{display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:start;margin-top:34px}
+.ss-steps{display:flex;flex-direction:column;gap:38vh}
+.ss-steps>div:first-child{padding-top:4vh}
+.ss-steps>div:last-child{padding-bottom:30vh}
+.ss-step{opacity:.32;transition:opacity .5s var(--e1)}
+.ss-step.ativo{opacity:1}
+.ss-step h3{font-size:28px;margin-bottom:10px}
+.ss-pin{position:sticky;top:18vh;height:56vh;display:flex;align-items:center;justify-content:center}
+.ss-visual{position:relative;width:100%;max-width:340px;aspect-ratio:1/1;border-radius:var(--r);background:var(--card);border:1px solid #ffffff14;overflow:hidden}
+.ss-visual i{position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:18px;opacity:0;transform:translateY(16px) scale(.94);transition:opacity .5s var(--e1),transform .5s var(--e1)}
+.ss-visual i.ativo{opacity:1;transform:translateY(0) scale(1)}
+.ss-visual svg{width:64px;height:64px;color:var(--ac);stroke:currentColor;stroke-width:1.5;fill:none;stroke-linecap:round;stroke-linejoin:round}
+.ss-visual span{font-weight:600;font-size:17px;text-align:center;padding:0 24px}
+@media(max-width:860px){
+  .ss-wrap{grid-template-columns:1fr}
+  .ss-pin{position:static;height:auto;margin-bottom:28px}
+  .ss-steps{gap:8vh}
+  .ss-steps>div:first-child{padding-top:0}
+  .ss-steps>div:last-child{padding-bottom:4vh}
+}
+.estatico .ss-pin{position:static;height:auto}
+.estatico .ss-visual i{position:static;opacity:1;transform:none;display:none}
+.estatico .ss-visual i.ativo{display:flex}
 </style>
 </head>
 <body>
@@ -83,7 +107,7 @@ footer{padding:36px 20px 60px;text-align:center;color:var(--mut);font-size:14px}
 <section id="como" class="dois rv inv"><div class="img"><img src="assets/como.jpg" alt="Secretária de trabalho com vários ecrãs e a cidade ao fundo, à noite" loading="lazy"></div><div><span class="eyebrow">Como trabalhamos</span><h2 class="s">Diagnóstico grátis, entrega rápida</h2><p class="mut">Começamos por ver o que já existe e o que falta — site, redes, avaliações. Propomos o que faz sentido para o seu caso, com preço claro antes de começar. Sem compromissos escondidos.</p></div></section>
 <section id="atendimento" class="dois rv"><div class="img"><img src="assets/atendimento.jpg" alt="Telemóvel com uma notificação de mensagem a brilhar em azul" loading="lazy"></div><div><span class="eyebrow">Sempre disponíveis</span><h2 class="s">O seu cliente nunca fica sem resposta</h2><p class="mut">Montamos também assistentes de WhatsApp que respondem a horários, preços e marcações a qualquer hora — para o seu negócio nunca perder um cliente por demora.</p></div></section>
 
-<section class="rv"><span class="eyebrow">Os serviços</span><h2 class="s">O que fazemos</h2><div class="grid3"><div class="card"><h3>Sites</h3><p class="mut">Páginas rápidas, feitas à medida, com as suas fotos e serviços reais.</p></div><div class="card"><h3>Vídeo e conteúdo</h3><p class="mut">Vídeo-tour, fotos e publicações para redes sociais.</p></div><div class="card"><h3>Avaliações e SEO local</h3><p class="mut">Respostas às avaliações do Google e presença mais forte nas pesquisas locais.</p></div><div class="card"><h3>Tráfego pago</h3><p class="mut">Anúncios no Google e Meta, com relatório claro do que foi gasto e do que resultou.</p></div><div class="card"><h3>Assistente de WhatsApp</h3><p class="mut">Responde a clientes fora de horas, com a informação certa do seu negócio.</p></div><div class="card"><h3>Alojamento incluído</h3><p class="mut">O site fica online sem custos extra de servidor da nossa parte.</p></div></div></section>
+<section class="rv"><span class="eyebrow">Os serviços</span><h2 class="s">O que fazemos</h2><div class="ss-wrap"><div class="ss-steps"><div class="ss-step" data-i="0"><h3>Sites</h3><p class="mut">Páginas rápidas, feitas à medida, com as suas fotos e serviços reais.</p></div><div class="ss-step" data-i="1"><h3>Vídeo e conteúdo</h3><p class="mut">Vídeo-tour, fotos e publicações para redes sociais.</p></div><div class="ss-step" data-i="2"><h3>Avaliações e SEO local</h3><p class="mut">Respostas às avaliações do Google e presença mais forte nas pesquisas locais.</p></div><div class="ss-step" data-i="3"><h3>Tráfego pago</h3><p class="mut">Anúncios no Google e Meta, com relatório claro do que foi gasto e do que resultou.</p></div><div class="ss-step" data-i="4"><h3>Assistente de WhatsApp</h3><p class="mut">Responde a clientes fora de horas, com a informação certa do seu negócio.</p></div><div class="ss-step" data-i="5"><h3>Alojamento incluído</h3><p class="mut">O site fica online sem custos extra de servidor da nossa parte.</p></div></div><div class="ss-pin"><div class="ss-visual"><i data-i="0" class="ativo"><svg viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="16" rx="2.5"/><path d="M3 8.5h18"/><circle cx="6" cy="6.3" r=".6" fill="currentColor" stroke="none"/><circle cx="8.2" cy="6.3" r=".6" fill="currentColor" stroke="none"/><path d="M7 13h6M7 16h10"/></svg><span>Sites</span></i><i data-i="1"><svg viewBox="0 0 24 24"><rect x="3" y="5.5" width="14" height="13" rx="2.5"/><path d="M17 10.5l4-2.3v7.6l-4-2.3z"/></svg><span>Vídeo e conteúdo</span></i><i data-i="2"><svg viewBox="0 0 24 24"><path d="M12 4.2l2.1 4.5 4.9.6-3.6 3.4.9 4.9L12 15.2l-4.3 2.4.9-4.9-3.6-3.4 4.9-.6z"/></svg><span>Avaliações e SEO local</span></i><i data-i="3"><svg viewBox="0 0 24 24"><path d="M4 18V9M10 18V5M16 18v-7M21 18H3"/><path d="M15 6l5-2.4M20 3.6l.4 3.4-3.3-.7"/></svg><span>Tráfego pago</span></i><i data-i="4"><svg viewBox="0 0 24 24"><path d="M4 20l1.1-3.8A8 8 0 1 1 8.6 19z"/><circle cx="9" cy="12" r=".9" fill="currentColor" stroke="none"/><circle cx="12.4" cy="12" r=".9" fill="currentColor" stroke="none"/><circle cx="15.8" cy="12" r=".9" fill="currentColor" stroke="none"/></svg><span>Assistente de WhatsApp</span></i><i data-i="5"><svg viewBox="0 0 24 24"><rect x="4" y="4.5" width="16" height="5.5" rx="1.8"/><rect x="4" y="13.5" width="16" height="5.5" rx="1.8"/><circle cx="7.3" cy="7.3" r=".8" fill="currentColor" stroke="none"/><circle cx="7.3" cy="16.3" r=".8" fill="currentColor" stroke="none"/></svg><span>Alojamento incluído</span></i></div></div></div></section>
 <section class="rv"><h2 class="s">Perguntas frequentes</h2><details><summary>Quanto tempo demora a ter o site pronto?</summary><p>Normalmente alguns dias, depois de recebermos as suas fotos e informações.</p></details><details><summary>Preciso de perceber de tecnologia?</summary><p>Não. Tratamos de tudo; você só aprova o resultado antes de publicarmos.</p></details><details><summary>Garantem resultados nos anúncios?</summary><p>Não prometemos números — ninguém pode. Mostramos sempre os dados reais da campanha, mês a mês.</p></details><details><summary>Os serviços mensais têm fidelização longa?</summary><p>Pagam-se mês a mês; falamos dos detalhes do seu caso antes de começar.</p></details><details><summary>Como começamos?</summary><p>Escreva-nos pelo WhatsApp a contar o seu negócio — o primeiro diagnóstico é grátis.</p></details></section>
 <section class="cta rv"><span class="eyebrow">Contacto</span><h2>Vamos falar do seu negócio</h2><p class="mut" style="margin-bottom:28px">Conte-nos o que precisa; respondemos normalmente no mesmo dia.</p><a class="btn" href="https://wa.me/351920554382">Falar no WhatsApp</a></section>
 </main>
@@ -129,6 +153,21 @@ function tick(){
   requestAnimationFrame(tick);
 }
 requestAnimationFrame(tick);
+})();
+</script>
+
+<script>
+(()=>{
+const steps=[...document.querySelectorAll('.ss-step')],icones=[...document.querySelectorAll('.ss-visual i')];
+if(!steps.length)return;
+let atual=0;
+const marca=i=>{if(i===atual)return;atual=i;
+  steps.forEach(s=>s.classList.toggle('ativo',+s.dataset.i===i));
+  icones.forEach(ic=>ic.classList.toggle('ativo',+ic.dataset.i===i));};
+marca(0);steps[0].classList.add('ativo');
+const io=new IntersectionObserver(es=>{es.forEach(e=>{if(e.isIntersecting)marca(+e.target.dataset.i)})},
+  {rootMargin:'-42% 0px -42% 0px',threshold:0});
+steps.forEach(s=>io.observe(s));
 })();
 </script>
 </body></html>
