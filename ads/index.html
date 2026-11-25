@@ -78,7 +78,11 @@ footer{padding:36px 20px 60px;text-align:center;color:var(--mut);font-size:14px}
 .ss-visual span{font-weight:600;font-size:17px;text-align:center;padding:0 24px}
 @media(max-width:860px){
   .ss-wrap{grid-template-columns:1fr}
-  .ss-pin{position:static;height:auto;margin-bottom:28px}
+  .ss-pin{order:-1;position:sticky;top:72px;height:auto;margin-bottom:22px;z-index:10}
+  .ss-visual{max-width:none;aspect-ratio:auto;height:76px;box-shadow:0 10px 24px #0005}
+  .ss-visual i{position:absolute;flex-direction:row;gap:14px;justify-content:flex-start;padding:0 16px}
+  .ss-visual svg{width:34px;height:34px;flex:none}
+  .ss-visual span{font-size:15px;padding:0;text-align:left}
   .ss-steps{gap:8vh}
   .ss-steps>div:first-child{padding-top:0}
   .ss-steps>div:last-child{padding-bottom:4vh}
