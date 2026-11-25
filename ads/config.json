@@ -111,5 +111,8 @@
   "botao": "Falar no WhatsApp",
   "link": "https://wa.me/351920554382"
  },
- "rodape": "© 2026 ADS — Adiell Digital Services · NIF 301042306 · Setúbal, Portugal · Imagens ilustrativas criadas com IA"
+ "rodape": "© 2026 ADS — Adiell Digital Services · NIF 301042306 · Setúbal, Portugal · Imagens ilustrativas criadas com IA",
+ "cores": {
+  "destaque": "#f0a93a"
+ }
 }
