@@ -1,0 +1,115 @@
+{
+ "estilo": "vidro-fosco",
+ "marca": "ADS",
+ "lingua": "pt-PT",
+ "titulo": "ADS — Adiell Digital Services | O seu negócio, online",
+ "descricao": "Sites, conteúdo, redes sociais, avaliações e tráfego pago para negócios locais. Uma equipa, sem complicação técnica.",
+ "alt_hero": "Secretária de trabalho digital à noite, com ecrãs a mostrar painéis azuis, um portátil a desenhar um site e um telemóvel com uma notificação de mensagem",
+ "hero_vh": 420,
+ "dica": "Role para ver como trabalhamos",
+ "bandas": [
+  {
+   "de": 0.0,
+   "ate": 0.3,
+   "texto": "O seu negócio, online.",
+   "sub": "Sites, conteúdo e anúncios — tudo numa só equipa."
+  },
+  {
+   "de": 0.36,
+   "ate": 0.66,
+   "texto": "Sem complicação técnica para si."
+  },
+  {
+   "de": 0.74,
+   "ate": 1.0,
+   "texto": "Fale connosco hoje.",
+   "sub": "Resposta pelo WhatsApp, normalmente no mesmo dia."
+  }
+ ],
+ "seccoes": [
+  {
+   "id": "sobre",
+   "etiqueta": "Quem somos",
+   "titulo": "Uma equipa, todos os serviços digitais",
+   "texto": "A ADS (Adiell Digital Services) trata do site, do conteúdo, das redes sociais e dos anúncios de negócios locais em Portugal. Uma pessoa de contacto, sem intermediários, sem jargão técnico.",
+   "imagem": "assets/sobre.jpg",
+   "alt": "Portátil a mostrar o desenho de um site, em tons de azul"
+  },
+  {
+   "id": "como",
+   "etiqueta": "Como trabalhamos",
+   "titulo": "Diagnóstico grátis, entrega rápida",
+   "texto": "Começamos por ver o que já existe e o que falta — site, redes, avaliações. Propomos o que faz sentido para o seu caso, com preço claro antes de começar. Sem compromissos escondidos.",
+   "imagem": "assets/como.jpg",
+   "alt": "Secretária de trabalho com vários ecrãs e a cidade ao fundo, à noite"
+  },
+  {
+   "id": "atendimento",
+   "etiqueta": "Sempre disponíveis",
+   "titulo": "O seu cliente nunca fica sem resposta",
+   "texto": "Montamos também assistentes de WhatsApp que respondem a horários, preços e marcações a qualquer hora — para o seu negócio nunca perder um cliente por demora.",
+   "imagem": "assets/atendimento.jpg",
+   "alt": "Telemóvel com uma notificação de mensagem a brilhar em azul"
+  }
+ ],
+ "lista": {
+  "etiqueta": "Os serviços",
+  "titulo": "O que fazemos",
+  "itens": [
+   {
+    "t": "Sites",
+    "d": "Páginas rápidas, feitas à medida, com as suas fotos e serviços reais."
+   },
+   {
+    "t": "Vídeo e conteúdo",
+    "d": "Vídeo-tour, fotos e publicações para redes sociais."
+   },
+   {
+    "t": "Avaliações e SEO local",
+    "d": "Respostas às avaliações do Google e presença mais forte nas pesquisas locais."
+   },
+   {
+    "t": "Tráfego pago",
+    "d": "Anúncios no Google e Meta, com relatório claro do que foi gasto e do que resultou."
+   },
+   {
+    "t": "Assistente de WhatsApp",
+    "d": "Responde a clientes fora de horas, com a informação certa do seu negócio."
+   },
+   {
+    "t": "Alojamento incluído",
+    "d": "O site fica online sem custos extra de servidor da nossa parte."
+   }
+  ]
+ },
+ "faq": [
+  {
+   "p": "Quanto tempo demora a ter o site pronto?",
+   "r": "Normalmente alguns dias, depois de recebermos as suas fotos e informações."
+  },
+  {
+   "p": "Preciso de perceber de tecnologia?",
+   "r": "Não. Tratamos de tudo; você só aprova o resultado antes de publicarmos."
+  },
+  {
+   "p": "Garantem resultados nos anúncios?",
+   "r": "Não prometemos números — ninguém pode. Mostramos sempre os dados reais da campanha, mês a mês."
+  },
+  {
+   "p": "Os serviços mensais têm fidelização longa?",
+   "r": "Pagam-se mês a mês; falamos dos detalhes do seu caso antes de começar."
+  },
+  {
+   "p": "Como começamos?",
+   "r": "Escreva-nos pelo WhatsApp a contar o seu negócio — o primeiro diagnóstico é grátis."
+  }
+ ],
+ "cta": {
+  "etiqueta": "Contacto",
+  "titulo": "Vamos falar do seu negócio",
+  "texto": "Conte-nos o que precisa; respondemos normalmente no mesmo dia.",
+  "botao": "Falar no WhatsApp",
+  "link": "https://wa.me/351920554382"
+ },
+ "rodape": "© 2026 ADS — Adiell Digital Services · NIF 301042306 · Setúbal, Portugal · Imagens ilustrativas criadas com IA"
+}
